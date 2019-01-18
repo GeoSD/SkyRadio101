@@ -7,15 +7,38 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var playpauseButton: UIButton!
+    
+    let stringURL = "https://www.skyradio.nl/player/skyradio.pls"
+    
+    var playerItem: AVPlayerItem!
+    var player: AVPlayer!
+    var audioSession = AVAudioSession.sharedInstance()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        guard let url = URL(string: stringURL) else {
+            print("Error while convert URL")
+            return
+        }
+        
+        let audioURLAsset = AVURLAsset(url: url)
+        playerItem = AVPlayerItem(asset: audioURLAsset)
+        player = AVPlayer(playerItem: playerItem)
     }
-    
-    
 
+    @IBAction func playPauseButtonTapped(_ sender: UIButton) {
+        if player.rate == 0 {
+            player.play()
+        } else {
+            player.pause()
+        }
+    }
 }
+
 
