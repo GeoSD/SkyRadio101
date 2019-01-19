@@ -28,16 +28,25 @@
                                     <action selector="playPauseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUM-cx-VYD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wS-v8-CAw">
+                                <rect key="frame" x="139" y="338" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BUs-fc-yeF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="6zH-jd-bEE"/>
+                            <constraint firstItem="7wS-v8-CAw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VMm-WH-AjO"/>
+                            <constraint firstItem="7wS-v8-CAw" firstAttribute="top" secondItem="BUs-fc-yeF" secondAttribute="bottom" constant="8" id="sfA-m5-sBI"/>
                             <constraint firstItem="BUs-fc-yeF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uXM-qq-Tgf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="playpauseButton" destination="BUs-fc-yeF" id="c0w-a0-RZH"/>
+                        <outlet property="statusLabel" destination="7wS-v8-CAw" id="FuA-uR-b5i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

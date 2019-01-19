@@ -22,6 +22,7 @@
 		664F610E21F243AC00591D5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		664F611121F243AC00591D5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		664F611321F243AC00591D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		668A3E9921F30C0E001800BA /* SkyRadio101.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkyRadio101.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,7 @@
 			children = (
 				664F610621F243A500591D5F /* SkyRadio101 */,
 				664F610521F243A500591D5F /* Products */,
+				668A3E9A21F30C0E001800BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +56,7 @@
 		664F610621F243A500591D5F /* SkyRadio101 */ = {
 			isa = PBXGroup;
 			children = (
+				668A3E9921F30C0E001800BA /* SkyRadio101.entitlements */,
 				664F610721F243A500591D5F /* AppDelegate.swift */,
 				664F610921F243A500591D5F /* ViewController.swift */,
 				664F610B21F243A500591D5F /* Main.storyboard */,
@@ -62,6 +65,13 @@
 				664F611321F243AC00591D5F /* Info.plist */,
 			);
 			path = SkyRadio101;
+			sourceTree = "<group>";
+		};
+		668A3E9A21F30C0E001800BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +109,9 @@
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
 							};
 						};
 					};
